@@ -736,12 +736,6 @@ lesHandleProvision (BREthereumLES les,
 }
 
 /**
- * Check if there is already a node for neighbor.  If there is, do nothing; if there isn't then
- * create a node and add it.
- */
-
-
-/**
  * Handle a Node's Neighbors result by adding the neighbor, if unknown, as a new node.
  *
  * @param les LES
@@ -878,6 +872,7 @@ lesThread (BREthereumLES les) {
             lesDeactivateNodes(les, route, nodesToRemove, "TIMEDOUT");
             array_clear (nodesToRemove);
         }
+        
         //
         // We may have deactivated a node and thus have a new preferred node.  We might have
         // pending requests - like to get info on blockNumber 'N'.  Does the new preferred node

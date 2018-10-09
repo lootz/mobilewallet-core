@@ -787,11 +787,11 @@ runSyncTest (BREthereumType type,
         }
     }
 
-    BREthereumEWM ewm = ethereumCreate(ethereumMainnet, paperKey, type, mode, client,
-                                       nodes,
-                                       blocks,
-                                       transactions,
-                                       logs);
+    BREthereumEWM ewm = ethereumCreate (ethereumMainnet, paperKey, type, mode, client,
+                                        nodes,
+                                        blocks,
+                                        transactions,
+                                        logs);
 
     char *address = ethereumGetAccountPrimaryAddress(ewm);
     printf ("***\n*** Address: %s\n", address);

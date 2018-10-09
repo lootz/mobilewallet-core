@@ -1093,11 +1093,11 @@ nodeStatusIsSufficient (BREthereumNode node) {
     assert (MESSAGE_PIP != node->local.status.identifier ||
             PIP_MESSAGE_STATUS == node->local.status.u.pip.type);
 
-    BREthereumP2PMessageStatus *locStatus = (MESSAGE_LES != node->local.status.identifier
+    BREthereumP2PMessageStatus *locStatus = (MESSAGE_LES == node->local.status.identifier
                                               ? &node->local.status.u.les.u.status.p2p
                                               : &node->local.status.u.pip.u.status.p2p);
 
-    BREthereumP2PMessageStatus *remStatus = (MESSAGE_LES != node->remote.status.identifier
+    BREthereumP2PMessageStatus *remStatus = (MESSAGE_LES == node->remote.status.identifier
                                               ? &node->remote.status.u.les.u.status.p2p
                                               : &node->remote.status.u.pip.u.status.p2p);
 

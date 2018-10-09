@@ -419,7 +419,9 @@ messageDISDecode (BRRlpItem item,
             };
 
         case DIS_MESSAGE_FIND_NEIGHBORS:
-            assert (0);
+            // assert (0);
+            rlpCoderSetFailed (coder.rlp);
+            return (BREthereumDISMessage) {};
     }
 }
 
